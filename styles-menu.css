@@ -51,7 +51,7 @@ body {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow-x: hidden;  /* Empêche le débordement horizontal */
+    overflow-x: hidden;
 }
 
 /* Titre des catégories au-dessus des sliders */
@@ -72,7 +72,7 @@ body {
     scroll-behavior: smooth;
     border-bottom: 2px solid #003366;
     margin-bottom: 30px;
-    scrollbar-width: thin;  /* Personnalisation des scrollbars pour Firefox */
+    scrollbar-width: thin;
 }
 
 .slider-horizontal::-webkit-scrollbar {
@@ -125,33 +125,21 @@ footer {
     margin-top: 20px;
 }
 
-/* Ajustement du logo pour qu'il soit plus petit et adapté à toutes les tailles d'écran */
+/* --- ✅ Ajustement du logo : Responsive et propre --- */
 .logo {
-    max-width: 120px;  /* Réduit la taille maximale du logo */
+    width: 20%;
+    max-width: 150px;
+    min-width: 80px;
     height: auto;
     transition: transform 0.3s;
-    margin-bottom: 5px; /* Espace sous le logo */
+    margin-bottom: 5px;
 }
 
-/* Effet au survol du logo */
 .logo:hover {
     transform: scale(1.1);
 }
 
-/* --- Responsive: Réduit encore plus le logo sur mobile --- */
-@media (max-width: 768px) {  /* Tablette et mobile */
-    .logo {
-        max-width: 100px;  /* Réduit encore plus le logo sur tablette et mobile */
-    }
-}
-
-@media (max-width: 480px) {  /* Mobile portrait */
-    .logo {
-        max-width: 80px;   /* Logo encore plus petit sur les petits écrans */
-    }
-}
-
-/* --- ✅ RESPONSIVE DESIGN ✅ --- */
+/* --- ✅ Responsive Design --- */
 @media (max-width: 1024px) {  /* iPad */
     .menu {
         max-width: 90%;
@@ -171,6 +159,10 @@ footer {
     .nav-menu a {
         padding: 5px 8px;
         font-size: 14px;
+    }
+
+    .logo {
+        width: 25%;
     }
 }
 
@@ -213,6 +205,10 @@ footer {
         min-width: 150px;
         padding: 5px;
     }
+
+    .logo {
+        width: 30%;
+    }
 }
 
 @media (max-width: 480px) {  /* Mobile portrait */
@@ -232,6 +228,10 @@ footer {
     .description {
         font-size: 11px;
     }
+
+    .logo {
+        width: 35%;
+    }
 }
 
 @media (max-width: 360px) {  /* Très petits écrans */
@@ -243,4 +243,9 @@ footer {
     .nav-menu a {
         font-size: 12px;
     }
+
+    .logo {
+        width: 40%;
+    }
 }
+
