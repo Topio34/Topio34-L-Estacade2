@@ -24,19 +24,17 @@ body {
 .nav-menu {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Ajustement du gap pour correspondre à l'index */
-    flex-wrap: nowrap; /* Garde les liens en ligne */
-    margin: 0; /* Alignement parfait */
-    padding: 10px 0; /* Ajustement pour uniformiser */
+    gap: 20px;
+    flex-wrap: wrap;  /* Pour que les liens restent en ligne mais passent à la ligne si l'écran est trop petit */
+    margin: 10px 0;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px; /* Uniformiser avec l'index */
+    padding: 5px 10px;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 16px; /* Uniformiser avec l'index */
+    transition: background-color 0.3s;
     display: inline-block;
 }
 
@@ -193,14 +191,15 @@ footer {
 @media (max-width: 768px) {
     .nav-menu {
         flex-wrap: nowrap;
-        overflow-x: auto;
+        overflow-x: auto;  /* Ajoute une barre de défilement horizontale si nécessaire */
         justify-content: center;
         gap: 10px;
     }
 
     nav a {
-        padding: 8px 15px;
+        padding: 5px 8px;
         font-size: 14px;
+        display: inline-block;  /* Garde les liens en ligne */
     }
 
     .menu {
@@ -250,6 +249,16 @@ footer {
     }
 }
 
+/* Ajustement pour les très petits écrans */
+@media (max-width: 360px) {
+    .slider-horizontal ul li {
+        min-width: 100px;
+        padding: 5px;
+    }
+    
+    .arrow {
+        font-size: 16px;
+    }
     
     nav a {
         font-size: 12px;
