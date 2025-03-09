@@ -38,7 +38,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero-section {
-    background-image: url('images/restaurant-bg.jpg');
+    background-image: url('restaurant-bg.jpg');
     background-size: cover;
     background-position: center;
     padding: 100px 20px;
