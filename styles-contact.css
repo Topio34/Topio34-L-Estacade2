@@ -21,7 +21,7 @@ body {
 }
 
 body {
-    padding-top: 80px; /* Pour compenser le header fixe */
+    padding-top: 80px;
 }
 
 nav a {
@@ -37,82 +37,64 @@ nav a:hover {
     color: #ffcc00;
 }
 
-/* Section contact */
-.contact-section {
-    max-width: 800px;
+/* Section À propos */
+.about-section {
+    max-width: 1100px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h1 {
     text-align: center;
-}
-
-.contact-section h2, .contact-section h3 {
     color: #003366;
-}
-
-.call-button {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 10px 20px;
-    background-color: #003366;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.call-button:hover {
-    background-color: #002244;
-}
-
-/* Carte Google Maps */
-#map {
-    width: 100%;
-    height: 300px;
     margin-bottom: 20px;
-    border: 2px solid #003366;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.about-img {
+    flex: 1;
+    max-width: 400px;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Formulaire des commentaires */
-.comment-form input, .comment-form textarea, .comment-form button {
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.about-text {
+    flex: 2;
 }
 
-.comment-form button {
-    background-color: #003366;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.about-text h2 {
+    color: #003366;
+    margin-top: 10px;
 }
 
-.comment-form button:hover {
-    background-color: #002244;
+.about-text p, .about-text ul {
+    line-height: 1.6;
 }
 
-/* Section des commentaires */
-.comment-section {
-    margin-top: 20px;
-    text-align: left;
-}
-
-.comment-section ul {
-    list-style: none;
+.about-text ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.comment-section ul li {
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border-left: 3px solid #003366;
+.about-text ul li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.about-text ul li::before {
+    content: "•";
+    color: #ffcc00;
+    margin-right: 8px;
 }
 
 /* Footer */
@@ -122,4 +104,30 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section h1 {
+        font-size: 22px;
+    }
+    
+    .about-text h2 {
+        font-size: 18px;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
 }
