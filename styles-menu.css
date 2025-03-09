@@ -44,7 +44,7 @@ body {
 .popup {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;             /* Assure que le pop-up soit au-dessus de tout */
     left: 0;
     top: 0;
     width: 100%;
