@@ -40,35 +40,45 @@ body {
     text-align: center;
 }
 
-/* --- ✅ Responsive Design pour le logo --- */
-@media (max-width: 768px) {  /* Tablette et mobile */
-    .logo {
-        max-width: 150px;     /* PAS DE RÉDUCTION : même taille que les autres pages */
-    }
-
-    .logo-container h1 {
-        font-size: 24px;      /* PAS DE RÉDUCTION : même taille que les autres pages */
-    }
+/* --- ✅ Pop-up pour l'affichage des plats --- */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-top: 50px;
 }
 
-@media (max-width: 480px) {  /* Mobile portrait */
-    .logo {
-        max-width: 150px;     /* PAS DE RÉDUCTION : même taille que les autres pages */
-    }
-
-    .logo-container h1 {
-        font-size: 24px;      /* PAS DE RÉDUCTION : même taille que les autres pages */
-    }
+.popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
 }
 
-@media (max-width: 360px) {  /* Très petits écrans */
-    .logo {
-        max-width: 150px;     /* PAS DE RÉDUCTION : même taille que les autres pages */
-    }
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
 
-    .logo-container h1 {
-        font-size: 24px;      /* PAS DE RÉDUCTION : même taille que les autres pages */
-    }
+.close-btn:hover {
+    color: #ff6666;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* --- ✅ Styles pour le menu et autres éléments --- */
@@ -112,50 +122,6 @@ body {
     color: #003366;
     margin: 20px 0 10px;
     font-weight: bold;
-}
-
-/* Slider horizontal pour chaque catégorie */
-.slider-horizontal {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px;
-    gap: 20px;
-    scroll-behavior: smooth;
-    border-bottom: 2px solid #003366;
-    margin-bottom: 30px;
-    scrollbar-width: thin;
-}
-
-.slider-horizontal::-webkit-scrollbar {
-    height: 8px;
-}
-
-.slider-horizontal::-webkit-scrollbar-thumb {
-    background-color: #003366;
-    border-radius: 5px;
-}
-
-.slider-horizontal ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-}
-
-.slider-horizontal ul li {
-    min-width: 220px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s;
-    white-space: nowrap;
-}
-
-.slider-horizontal ul li:hover {
-    transform: scale(1.05);
-    background-color: #e0e0e0;
 }
 
 /* Description des plats */
