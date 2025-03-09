@@ -7,7 +7,7 @@ body {
     color: #333;
 }
 
-/* Header */
+/* Header fixe */
 .header {
     background-color: #003366;
     color: #fff;
@@ -20,12 +20,22 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Menu aligné horizontalement */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;  /* Pour que les liens restent en ligne mais passent à la ligne si l'écran est trop petit */
+    margin: 10px 0;
+}
+
 nav a {
     color: #fff;
-    margin: 0 10px;
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
     display: inline-block;
-    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -179,6 +189,19 @@ footer {
 
 /* --- ✅ RESPONSIVE DESIGN ✅ --- */
 @media (max-width: 768px) {
+    .nav-menu {
+        flex-wrap: nowrap;
+        overflow-x: auto;  /* Ajoute une barre de défilement horizontale si nécessaire */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 5px 8px;
+        font-size: 14px;
+        display: inline-block;  /* Garde les liens en ligne */
+    }
+
     .menu {
         padding: 10px;
     }
@@ -190,15 +213,6 @@ footer {
     
     .arrow {
         font-size: 20px;
-    }
-    
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-    
-    .header {
-        padding: 10px;
     }
     
     .popup img {
@@ -222,7 +236,7 @@ footer {
     }
     
     nav a {
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .description {
