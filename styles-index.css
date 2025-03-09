@@ -15,7 +15,7 @@ body {
 }
 
 .logo {
-    height: 50px; /* Ajuste la taille du logo ici */
+    height: 20px; /* Ajuste la taille du logo ici */
     width: auto;
     vertical-align: middle;
     transition: transform 0.3s;
