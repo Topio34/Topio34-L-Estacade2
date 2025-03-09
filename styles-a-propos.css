@@ -192,3 +192,36 @@ footer {
         font-size: 14px;
     }
 }
+
+/* --- Ajustement du menu horizontal centré sous le logo sur mobile --- */
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;   /* Empile le logo, le texte et le menu verticalement */
+        align-items: center;      /* Centre horizontalement */
+        padding: 10px 0;          /* Réduit le padding du header */
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: column;   /* Empile le logo et le texte verticalement */
+        align-items: center;      /* Centre horizontalement */
+        margin-bottom: 10px;      /* Espace sous le logo et le texte */
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;      /* Menu reste horizontal */
+        justify-content: center;  /* Centre les liens horizontalement */
+        gap: 15px;                /* Espace entre les liens */
+        padding-bottom: 10px;     /* Espace sous le menu */
+        background-color: #003366; /* Garde la couleur de fond du menu */
+        width: auto;              /* Ajuste la largeur du menu automatiquement */
+    }
+
+    .nav-menu a {
+        padding: 8px 10px;        /* Ajuste l'espacement des liens sur mobile */
+        text-align: center;       /* Centre le texte des liens */
+        border-bottom: none;      /* Supprime les bordures sous les liens */
+    }
+}
