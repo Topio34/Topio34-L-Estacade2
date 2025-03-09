@@ -197,3 +197,25 @@ footer {
         width: 90%;
     }
 }
+
+/* --- Ajustement du menu sur mobile --- */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;  /* Empile les liens verticalement */
+        align-items: center;     /* Centre les liens horizontalement */
+        gap: 10px;               /* Espace entre les liens */
+        padding-bottom: 10px;    /* Espace sous le menu */
+    }
+
+    .header {
+        padding: 10px;          /* Réduit le padding du header sur mobile */
+    }
+
+    .logo-container {
+        margin-bottom: 10px;    /* Espace sous le logo et le texte */
+    }
+
+    .nav-menu a {
+        padding: 8px 15px;      /* Ajuste l'espacement des liens sur mobile */
+    }
+}
