@@ -25,11 +25,11 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;  /* Pour que les liens restent en ligne mais passent à la ligne si l'écran est trop petit */
+    flex-wrap: wrap;
     margin: 10px 0;
 }
 
-nav a {
+.nav-menu a {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
@@ -38,7 +38,7 @@ nav a {
     display: inline-block;
 }
 
-nav a:hover {
+.nav-menu a:hover {
     text-decoration: underline;
     color: #ffcc00;
 }
@@ -64,8 +64,7 @@ nav a:hover {
     text-align: center;
     font-size: 22px;
     color: #003366;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 20px 0 10px;
     font-weight: bold;
 }
 
@@ -82,7 +81,6 @@ nav a:hover {
 
 .slider-horizontal ul {
     display: flex;
-    flex-wrap: nowrap;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -97,7 +95,6 @@ nav a:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, background-color 0.3s;
     white-space: nowrap;
-    position: relative;
 }
 
 .slider-horizontal ul li:hover {
@@ -105,7 +102,7 @@ nav a:hover {
     background-color: #e0e0e0;
 }
 
-/* Description des plats en plus petit et plus fin */
+/* Description des plats */
 .description {
     font-size: 13px;
     color: #666;
@@ -122,19 +119,6 @@ nav a:hover {
 .slider-horizontal::-webkit-scrollbar-thumb {
     background-color: #003366;
     border-radius: 5px;
-}
-
-/* Flèche indicatrice */
-.arrow {
-    display: block;
-    text-align: center;
-    font-size: 24px;
-    color: #003366;
-    margin-top: 10px;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 /* Style pour le pop-up */
@@ -189,17 +173,32 @@ footer {
 
 /* --- ✅ RESPONSIVE DESIGN ✅ --- */
 @media (max-width: 768px) {
-    .nav-menu {
-        flex-wrap: nowrap;
-        overflow-x: auto;  /* Ajoute une barre de défilement horizontale si nécessaire */
-        justify-content: center;
-        gap: 10px;
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
     }
 
-    nav a {
-        padding: 5px 8px;
-        font-size: 14px;
-        display: inline-block;  /* Garde les liens en ligne */
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        padding-bottom: 10px;
+        background-color: #003366;
+    }
+
+    .nav-menu a {
+        padding: 8px 10px;
+        text-align: center;
     }
 
     .menu {
@@ -209,15 +208,6 @@ footer {
     .slider-horizontal ul li {
         min-width: 150px;
         padding: 5px;
-    }
-    
-    .arrow {
-        font-size: 20px;
-    }
-    
-    .popup img {
-        max-width: 95%;
-        max-height: 70%;
     }
 }
 
@@ -231,21 +221,12 @@ footer {
         padding: 5px;
     }
     
-    .arrow {
-        font-size: 18px;
-    }
-    
-    nav a {
+    .nav-menu a {
         font-size: 12px;
     }
     
     .description {
         font-size: 11px;
-    }
-    
-    .popup img {
-        max-width: 90%;
-        max-height: 60%;
     }
 }
 
@@ -256,43 +237,8 @@ footer {
         padding: 5px;
     }
     
-    .arrow {
-        font-size: 16px;
-    }
-    
-    nav a {
+    .nav-menu a {
         font-size: 12px;
     }
 }
-/* --- Ajustement du menu horizontal centré sous le logo sur mobile --- */
-@media (max-width: 768px) {
-    .header {
-        display: flex;
-        flex-direction: column;   /* Empile le logo, le texte et le menu verticalement */
-        align-items: center;      /* Centre horizontalement */
-        padding: 10px 0;          /* Réduit le padding du header */
-    }
 
-    .logo-container {
-        display: flex;
-        flex-direction: column;   /* Empile le logo et le texte verticalement */
-        align-items: center;      /* Centre horizontalement */
-        margin-bottom: 10px;      /* Espace sous le logo et le texte */
-    }
-
-    .nav-menu {
-        display: flex;
-        flex-direction: row;      /* Menu reste horizontal */
-        justify-content: center;  /* Centre les liens horizontalement */
-        gap: 15px;                /* Espace entre les liens */
-        padding-bottom: 10px;     /* Espace sous le menu */
-        background-color: #003366; /* Garde la couleur de fond du menu */
-        width: auto;              /* Ajuste la largeur du menu automatiquement */
-    }
-
-    .nav-menu a {
-        padding: 8px 10px;        /* Ajuste l'espacement des liens sur mobile */
-        text-align: center;       /* Centre le texte des liens */
-        border-bottom: none;      /* Supprime les bordures sous les liens */
-    }
-}
