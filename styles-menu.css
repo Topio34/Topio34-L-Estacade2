@@ -20,9 +20,9 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* --- ✅ Ajustement du logo : Uniformisé partout --- */
+/* --- ✅ Ajustement du logo : IDENTIQUE AUX AUTRES PAGES --- */
 .logo {
-    max-width: 150px;         /* Uniformise avec les autres pages */
+    max-width: 150px;         /* Même taille que les autres pages */
     height: auto;
     transition: transform 0.3s;
     margin-bottom: 5px;
@@ -36,38 +36,38 @@ body {
 .logo-container h1 {
     margin: 5px 0;
     color: #fff;
-    font-size: 24px;          /* Uniformise la taille du texte partout */
+    font-size: 24px;          /* Même taille que les autres pages */
     text-align: center;
 }
 
 /* --- ✅ Responsive Design pour le logo --- */
 @media (max-width: 768px) {  /* Tablette et mobile */
     .logo {
-        max-width: 120px;     /* Taille maximale réduite sur mobile */
+        max-width: 150px;     /* PAS DE RÉDUCTION : même taille que les autres pages */
     }
 
     .logo-container h1 {
-        font-size: 22px;      /* Réduit légèrement le texte sur mobile */
+        font-size: 24px;      /* PAS DE RÉDUCTION : même taille que les autres pages */
     }
 }
 
 @media (max-width: 480px) {  /* Mobile portrait */
     .logo {
-        max-width: 100px;     /* Limite la taille maximale */
+        max-width: 150px;     /* PAS DE RÉDUCTION : même taille que les autres pages */
     }
 
     .logo-container h1 {
-        font-size: 20px;      /* Réduit le texte sur mobile */
+        font-size: 24px;      /* PAS DE RÉDUCTION : même taille que les autres pages */
     }
 }
 
 @media (max-width: 360px) {  /* Très petits écrans */
     .logo {
-        max-width: 80px;      /* Taille maximale très réduite */
+        max-width: 150px;     /* PAS DE RÉDUCTION : même taille que les autres pages */
     }
 
     .logo-container h1 {
-        font-size: 18px;      /* Texte encore plus petit sur petits écrans */
+        font-size: 24px;      /* PAS DE RÉDUCTION : même taille que les autres pages */
     }
 }
 
