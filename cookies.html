@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestion des Cookies - L'Estacade</title>
+<link rel="stylesheet" href="css/styles-cookies.css">
+<script defer src="js/scripts-cookies.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <h1>L'Estacade - Gestion des Cookies</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="a propos.html">À propos</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="cookie-policy">
+    <h2>Politique de Cookies</h2>
+    <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site, analyser le trafic et personnaliser le contenu. Vous pouvez choisir d'accepter ou de refuser les cookies.</p>
+
+    <h3>Types de cookies utilisés :</h3>
+    <ul>
+        <li><strong>Cookies essentiels :</strong> Nécessaires au bon fonctionnement du site et ne peuvent pas être désactivés.</li>
+        <li><strong>Cookies d'analyse :</strong> Utilisés pour comprendre comment le site est utilisé et améliorer l'expérience utilisateur.</li>
+        <li><strong>Cookies de personnalisation :</strong> Mémorisent vos préférences pour vous offrir une expérience plus personnalisée.</li>
+    </ul>
+
+    <h3>Votre choix concernant les cookies :</h3>
+    <button onclick="acceptCookies()">Accepter tous les cookies</button>
+    <button onclick="declineCookies()">Refuser tous les cookies</button>
+</section>
+
+<!-- Bannière de consentement aux cookies -->
+<div id="cookie-banner" class="cookie-banner">
+    <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site.</p>
+    <button onclick="acceptCookies()">Accepter</button>
+    <button onclick="declineCookies()">Refuser</button>
+</div>
+
+<footer>
+    <p>L'Estacade - 11 Place de la Capitainerie, 34200 Sète</p>
+</footer>
+
+</body>
+</html>

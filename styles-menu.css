@@ -1,0 +1,247 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+/* Menu */
+.menu {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* Titre des catégories au-dessus des sliders */
+.category-title {
+    text-align: center;
+    font-size: 22px;
+    color: #003366;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Slider horizontal pour chaque catégorie */
+.slider-horizontal {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 20px;
+    scroll-behavior: smooth;
+    border-bottom: 2px solid #003366;
+    margin-bottom: 30px;
+}
+
+.slider-horizontal ul {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.slider-horizontal ul li {
+    min-width: 220px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s;
+    white-space: nowrap;
+    position: relative;
+}
+
+.slider-horizontal ul li:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+}
+
+/* Description des plats en plus petit et plus fin */
+.description {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+/* Scrollbar personnalisée pour les sliders */
+.slider-horizontal::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slider-horizontal::-webkit-scrollbar-thumb {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+/* Flèche indicatrice */
+.arrow {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #003366;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Style pour le pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff6666;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* --- ✅ RESPONSIVE DESIGN ✅ --- */
+@media (max-width: 768px) {
+    .menu {
+        padding: 10px;
+    }
+    
+    .slider-horizontal ul li {
+        min-width: 150px;
+        padding: 5px;
+    }
+    
+    .arrow {
+        font-size: 20px;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .header {
+        padding: 10px;
+    }
+    
+    .popup img {
+        max-width: 95%;
+        max-height: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu h1, .category-title {
+        font-size: 18px;
+    }
+    
+    .slider-horizontal ul li {
+        min-width: 120px;
+        padding: 5px;
+    }
+    
+    .arrow {
+        font-size: 18px;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
+    
+    .description {
+        font-size: 11px;
+    }
+    
+    .popup img {
+        max-width: 90%;
+        max-height: 60%;
+    }
+}
+
+/* Ajustement pour les très petits écrans */
+@media (max-width: 360px) {
+    .slider-horizontal ul li {
+        min-width: 100px;
+        padding: 5px;
+    }
+    
+    .arrow {
+        font-size: 16px;
+    }
+    
+    nav a {
+        font-size: 12px;
+    }
+}

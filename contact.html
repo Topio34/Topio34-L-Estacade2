@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - L'Estacade</title>
+<link rel="stylesheet" href="css/styles-contact.css">
+<script defer src="js/scripts-contact.js"></script>
+<script defer src="scripts-cookies.js"></script>
+
+</head>
+<body>
+
+<header class="header">
+    <h1>L'Estacade - Sète</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+</header>
+
+<section class="contact-section">
+    <h2>Contactez-nous</h2>
+
+    <!-- Bouton pour appeler directement -->
+    <a href="tel:+330637365488" class="call-button">📞 Appeler le restaurant</a>
+
+    <!-- Carte avec la géolocalisation -->
+    <h3>Nous trouver</h3>
+    <div id="map"></div>
+
+    <!-- Section des commentaires -->
+    <h3>Laissez un commentaire</h3>
+    <form class="comment-form">
+        <input type="text" id="username" placeholder="Votre nom" required>
+        <textarea id="comment" placeholder="Votre commentaire..." rows="4" required></textarea>
+        <button type="submit">Poster</button>
+    </form>
+
+    <div class="comment-section">
+        <h4>Commentaires :</h4>
+        <ul id="comment-list"></ul>
+    </div>
+</section>
+
+<footer>
+    <p>L'Estacade - 11 Place de la Capitainerie, 34200 Sète</p>
+    <nav class="nav-menu">
+        <a href="politique-de-cookies.html">Politique de cookies</a>
+    </nav>
+</footer>
+
+<!-- API Google Maps avec votre clé API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&callback=initMap" async defer></script>
+
+</body>
+</html>
