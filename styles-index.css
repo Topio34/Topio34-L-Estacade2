@@ -8,19 +8,34 @@ body {
     color: #333;
 }
 
-/* Conteneur du logo et du texte */
+/* Centrer le logo et le texte au milieu de la page */
 .logo-container {
     text-align: center;
-    margin-bottom: 10px;  /* Espace sous le logo et le texte */
+    margin-top: 20px;      /* Espace au-dessus du logo et du texte */
+    margin-bottom: 10px;   /* Espace sous le logo et le texte */
+    display: flex;
+    flex-direction: column; /* Empile le logo et le texte verticalement */
+    align-items: center;    /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
 }
 
+/* Centrer le texte du titre */
 .logo-container h1 {
     margin: 5px 0;
-    color: #fff;  /* Texte en blanc pour s'accorder avec le header */
+    color: #fff;            /* Texte en blanc pour s'accorder avec le header */
     font-size: 24px;
+    text-align: center;
 }
 
-/* Menu de navigation aligné horizontalement sous le logo */
+/* Ajustement du logo */
+.logo {
+    max-width: 150px;       /* Ajuster la taille du logo */
+    height: auto;
+    margin-bottom: 5px;     /* Espace sous le logo */
+    transition: transform 0.3s;
+}
+
+/* Centrer le menu de navigation */
 .nav-menu {
     display: flex;
     justify-content: center;
@@ -42,23 +57,11 @@ body {
     color: #ffcc00;
 }
 
-/* Ajustement du logo */
-.logo {
-    max-width: 120px;   /* Ajuster la taille du logo */
-    height: auto;
-    margin-bottom: 5px; /* Espace sous le logo */
-    transition: transform 0.3s;
-}
-
-.logo:hover {
-    transform: scale(1.1);
-}
-
-/* Ajustement du header avec le logo */
+/* Ajustement du header avec le logo centré */
 .header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center;    /* Centre horizontalement */
     background-color: #003366;
     color: #fff;
     padding: 10px 20px;
@@ -68,6 +71,7 @@ body {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 .header h1 {
     margin: 0;
