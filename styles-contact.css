@@ -3,15 +3,67 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 80px;
     background-color: #f0f0f0;
     color: #333;
 }
 
-/* Header */
+/* Centrer le logo et le texte au milieu de la page */
+.logo-container {
+    text-align: center;
+    margin-top: 20px;      /* Espace au-dessus du logo et du texte */
+    margin-bottom: 10px;   /* Espace sous le logo et le texte */
+    display: flex;
+    flex-direction: column; /* Empile le logo et le texte verticalement */
+    align-items: center;    /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+}
+
+/* Centrer le texte du titre */
+.logo-container h1 {
+    margin: 5px 0;
+    color: #fff;            /* Texte en blanc pour s'accorder avec le header */
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Ajustement du logo */
+.logo {
+    max-width: 150px;       /* Ajuster la taille du logo */
+    height: auto;
+    margin-bottom: 5px;     /* Espace sous le logo */
+    transition: transform 0.3s;
+}
+
+/* Centrer le menu de navigation */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #003366;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+/* Ajustement du header avec le logo centré */
 .header {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center;    /* Centre horizontalement */
     background-color: #003366;
     color: #fff;
-    text-align: center;
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -20,19 +72,29 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-body {
-    padding-top: 80px;
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
-nav a {
+/* Menu aligné horizontalement */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
     color: #fff;
-    margin: 0 10px;
     text-decoration: none;
-    display: inline-block;
-    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-nav a:hover {
+.nav-menu a:hover {
     text-decoration: underline;
     color: #ffcc00;
 }
