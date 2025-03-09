@@ -22,9 +22,7 @@ body {
 
 /* --- ✅ Ajustement du logo : Uniformisé partout --- */
 .logo {
-    width: 20%;               /* Utilise % pour l'adaptation à l'écran */
-    max-width: 150px;         /* Taille max harmonisée partout */
-    min-width: 50px;          /* Assure une taille minimale sur mobile */
+    max-width: 150px;         /* Uniformise avec les autres pages */
     height: auto;
     transition: transform 0.3s;
     margin-bottom: 5px;
@@ -45,25 +43,31 @@ body {
 /* --- ✅ Responsive Design pour le logo --- */
 @media (max-width: 768px) {  /* Tablette et mobile */
     .logo {
-        width: 25%;           /* Ajuste la taille du logo sur tablette et mobile */
         max-width: 120px;     /* Taille maximale réduite sur mobile */
-        min-width: 50px;      /* Taille minimale maintenue */
+    }
+
+    .logo-container h1 {
+        font-size: 22px;      /* Réduit légèrement le texte sur mobile */
     }
 }
 
 @media (max-width: 480px) {  /* Mobile portrait */
     .logo {
-        width: 30%;           /* Ajuste légèrement le logo sur mobile */
         max-width: 100px;     /* Limite la taille maximale */
-        min-width: 40px;      /* Taille minimale sur mobile */
+    }
+
+    .logo-container h1 {
+        font-size: 20px;      /* Réduit le texte sur mobile */
     }
 }
 
 @media (max-width: 360px) {  /* Très petits écrans */
     .logo {
-        width: 35%;           /* Ajuste encore plus le logo sur petits écrans */
         max-width: 80px;      /* Taille maximale très réduite */
-        min-width: 30px;      /* Assure une taille minimale visible */
+    }
+
+    .logo-container h1 {
+        font-size: 18px;      /* Texte encore plus petit sur petits écrans */
     }
 }
 
@@ -215,3 +219,4 @@ footer {
         font-size: 12px;
     }
 }
+
