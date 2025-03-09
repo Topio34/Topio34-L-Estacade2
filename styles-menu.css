@@ -20,11 +20,11 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* --- ✅ Ajustement du logo : Responsive et propre --- */
+/* --- ✅ Ajustement du logo : Uniformisé partout --- */
 .logo {
-    width: 20%;
-    max-width: 120px;  /* Réduit la taille maximale du logo */
-    min-width: 50px;   /* Assure une taille minimale sur mobile */
+    width: 20%;               /* Utilise % pour l'adaptation à l'écran */
+    max-width: 150px;         /* Taille max harmonisée partout */
+    min-width: 50px;          /* Assure une taille minimale sur mobile */
     height: auto;
     transition: transform 0.3s;
     margin-bottom: 5px;
@@ -34,27 +34,35 @@ body {
     transform: scale(1.1);
 }
 
-/* --- ✅ Responsive Design --- */
+/* Centrer le texte du titre */
+.logo-container h1 {
+    margin: 5px 0;
+    color: #fff;
+    font-size: 24px;          /* Uniformise la taille du texte partout */
+    text-align: center;
+}
+
+/* --- ✅ Responsive Design pour le logo --- */
 @media (max-width: 768px) {  /* Tablette et mobile */
     .logo {
         width: 25%;           /* Ajuste la taille du logo sur tablette et mobile */
-        max-width: 100px;     /* Taille maximale réduite sur mobile */
+        max-width: 120px;     /* Taille maximale réduite sur mobile */
         min-width: 50px;      /* Taille minimale maintenue */
     }
 }
 
 @media (max-width: 480px) {  /* Mobile portrait */
     .logo {
-        width: 30%;           /* Augmente légèrement le pourcentage sur mobile */
-        max-width: 80px;      /* Limite la taille maximale à 80px */
-        min-width: 40px;      /* Réduit encore plus la taille minimale */
+        width: 30%;           /* Ajuste légèrement le logo sur mobile */
+        max-width: 100px;     /* Limite la taille maximale */
+        min-width: 40px;      /* Taille minimale sur mobile */
     }
 }
 
 @media (max-width: 360px) {  /* Très petits écrans */
     .logo {
-        width: 35%;           /* Ajuste encore plus le logo sur très petits écrans */
-        max-width: 70px;      /* Taille maximale très réduite */
+        width: 35%;           /* Ajuste encore plus le logo sur petits écrans */
+        max-width: 80px;      /* Taille maximale très réduite */
         min-width: 30px;      /* Assure une taille minimale visible */
     }
 }
@@ -66,6 +74,7 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     margin: 10px 0;
+    background-color: #003366;
 }
 
 .nav-menu a {
@@ -164,28 +173,6 @@ footer {
 }
 
 /* --- ✅ Responsive Design --- */
-@media (max-width: 1024px) {  /* iPad */
-    .menu {
-        max-width: 90%;
-        padding: 15px;
-    }
-
-    .slider-horizontal ul li {
-        min-width: 180px;
-        padding: 5px;
-    }
-
-    .nav-menu {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-
-    .nav-menu a {
-        padding: 5px 8px;
-        font-size: 14px;
-    }
-}
-
 @media (max-width: 768px) {  /* Tablette et mobile */
     .header {
         display: flex;
@@ -215,46 +202,16 @@ footer {
         padding: 8px 10px;
         text-align: center;
     }
-
-    .menu {
-        padding: 10px;
-        max-width: 90%;
-    }
-    
-    .slider-horizontal ul li {
-        min-width: 150px;
-        padding: 5px;
-    }
 }
 
 @media (max-width: 480px) {  /* Mobile portrait */
-    .menu h1, .category-title {
-        font-size: 18px;
-    }
-    
-    .slider-horizontal ul li {
-        min-width: 120px;
-        padding: 5px;
-    }
-    
     .nav-menu a {
         font-size: 12px;
-    }
-    
-    .description {
-        font-size: 11px;
     }
 }
 
 @media (max-width: 360px) {  /* Très petits écrans */
-    .slider-horizontal ul li {
-        min-width: 100px;
-        padding: 5px;
-    }
-    
     .nav-menu a {
         font-size: 12px;
     }
 }
-
-
