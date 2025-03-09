@@ -8,22 +8,38 @@ body {
     color: #333;
 }
 
-/* Style du logo */
-.logo-link {
-    display: inline-block;
-    margin-right: 20px;
+/* Style pour le header */
+.header {
+    display: flex;
+    justify-content: center;    /* Centre le logo horizontalement */
+    align-items: center;        /* Centre le logo verticalement si le header a plus de hauteur */
+    padding: 10px 0;            /* Espace autour du logo */
+    background-color: #f8f8f8;  /* Couleur de fond du header (facultatif) */
+    position: fixed;            /* Garde le logo en haut quand on défile */
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Légère ombre sous le header */
+    z-index: 1000;              /* Assure que le header reste au-dessus du contenu */
 }
 
+/* Style pour le logo */
 .logo {
-    height: 20px; /* Ajuste la taille du logo ici */
-    width: auto;
-    vertical-align: middle;
-    transition: transform 0.3s;
+    max-width: 150px;    /* Ajuster la taille du logo selon les besoins */
+    height: auto;        /* Conserve les proportions */
+    cursor: pointer;     /* Curseur en forme de main sur le logo */
+    transition: transform 0.3s; /* Animation au survol */
 }
 
 .logo:hover {
-    transform: scale(1.1); /* Effet au survol */
+    transform: scale(1.1);  /* Zoom léger au survol */
 }
+
+/* Style pour le contenu principal */
+main {
+    padding-top: 80px;   /* Compense la hauteur du header fixe */
+    text-align: center;
+}
+
 
 /* Ajustement du header avec le logo */
 .header {
